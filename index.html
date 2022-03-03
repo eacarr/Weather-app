@@ -38,10 +38,11 @@
       <div class="card">
         <div class="card-img">
           <section class="top d-flex justify-content-between">
-            <section class="dropdown d-flex flex-column">
+            <section class="dropdown">
               <button class="hamburger dropbtn">
                 <i class="fa fa-bars"></i>
               </button>
+
               <ul class="weather-list dropdown-content">
                 <li data-city="Houston">
                   <p>Houston</p>
@@ -58,15 +59,12 @@
               </ul>
             </section>
 
-            <button
-              class="add-location d-flex flex-column"
-              onclick="showSearch()"
-            >
+            <button class="add-location" onclick="showSearch()">
               <i class="fa fa-plus"></i>
             </button>
           </section>
           <section class="hidden-add d-flex justify-content-end">
-            <form class="add d-flex">
+            <form class="add d-flex hide">
               <input
                 type="text"
                 placeholder="City,State/Country"
@@ -101,8 +99,53 @@
               <h5 class="todays-low">35</h5>
             </div>
           </section>
-          <section class="container">
-            <div class="row row-cols-7"></div>
+          <section class="wrapper d-flex justify-content-center">
+            <div class="forcast">
+              <div class="day-row">
+                <div class="col">
+                  <p class="day">Sun</p>
+                  <i class="icon fa fa-cloud-sun"></i>
+                  <p class="high-temp">°65</p>
+                  <p class="low-temp">°35</p>
+                </div>
+                <div class="col">
+                  <p class="day">Sun</p>
+                  <i class="icon fa fa-cloud-sun"></i>
+                  <p class="high-temp">°65</p>
+                  <p class="low-temp">°35</p>
+                </div>
+                <div class="col">
+                  <p class="day">Sun</p>
+                  <i class="icon fa fa-cloud-sun"></i>
+                  <p class="high-temp">°65</p>
+                  <p class="low-temp">°35</p>
+                </div>
+                <div class="col">
+                  <p class="day">Sun</p>
+                  <i class="icon fa fa-cloud-sun"></i>
+                  <p class="high-temp">°65</p>
+                  <p class="low-temp">°35</p>
+                </div>
+                <div class="col">
+                  <p class="day">Sun</p>
+                  <i class="icon fa fa-cloud-sun"></i>
+                  <p class="high-temp">°65</p>
+                  <p class="low-temp">°35</p>
+                </div>
+                <div class="col">
+                  <p class="day">Sun</p>
+                  <i class="icon fa fa-cloud-sun"></i>
+                  <p class="high-temp">°65</p>
+                  <p class="low-temp">°35</p>
+                </div>
+                <div class="col">
+                  <p class="day">Sun</p>
+                  <i class="icon fa fa-cloud-sun"></i>
+                  <p class="high-temp">°65</p>
+                  <p class="low-temp">°35</p>
+                </div>
+              </div>
+            </div>
           </section>
         </div>
       </div>

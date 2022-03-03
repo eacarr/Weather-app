@@ -18,14 +18,14 @@ html {
 }
 
 /*
- * Remove text-shadow in selection highlight:
- * https://twitter.com/miketaylr/status/12228805301
- *
- * Vendor-prefixed and regular ::selection selectors cannot be combined:
- * https://stackoverflow.com/a/16982510/7133471
- *
- * Customize the background color to match your design.
- */
+     * Remove text-shadow in selection highlight:
+     * https://twitter.com/miketaylr/status/12228805301
+     *
+     * Vendor-prefixed and regular ::selection selectors cannot be combined:
+     * https://stackoverflow.com/a/16982510/7133471
+     *
+     * Customize the background color to match your design.
+     */
 
 ::-moz-selection {
   background: #b3d4fc;
@@ -38,8 +38,8 @@ html {
 }
 
 /*
- * A better looking default horizontal rule
- */
+     * A better looking default horizontal rule
+     */
 
 hr {
   display: block;
@@ -51,10 +51,10 @@ hr {
 }
 
 /*
- * Remove the gap between audio, canvas, iframes,
- * images, videos and the bottom of their containers:
- * https://github.com/h5bp/html5-boilerplate/issues/440
- */
+     * Remove the gap between audio, canvas, iframes,
+     * images, videos and the bottom of their containers:
+     * https://github.com/h5bp/html5-boilerplate/issues/440
+     */
 
 audio,
 canvas,
@@ -66,8 +66,8 @@ video {
 }
 
 /*
- * Remove default fieldset styles.
- */
+     * Remove default fieldset styles.
+     */
 
 fieldset {
   border: 0;
@@ -76,16 +76,16 @@ fieldset {
 }
 
 /*
- * Allow only vertical resizing of textareas.
- */
+     * Allow only vertical resizing of textareas.
+     */
 
 textarea {
   resize: vertical;
 }
 
 /* ==========================================================================
-   Author's custom styles
-   ========================================================================== */
+       Author's custom styles
+       ========================================================================== */
 ::before,
 ::after {
   /* sets how the total width and height of an element is calculated */
@@ -104,9 +104,12 @@ body {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
+  color: #4d4d4d;
 }
 
 #app {
+  color: #404040;
+
   width: 100%;
   height: 100%;
   background: lightblue;
@@ -117,7 +120,7 @@ body {
 .card {
   width: 300px;
   height: 600px;
-  @include border: 1px solid black;
+  border: 1px solid black;
   -webkit-box-shadow: 5px 5px 15px 5px #000000;
   box-shadow: 5px 5px 15px 5px #000000;
 }
@@ -132,12 +135,12 @@ body {
 }
 
 .top {
-  padding: 20px 20px 0 20px;
+  padding: 20px;
 }
 
 button {
   background: none;
-  color: inherit;
+  color: #404040;
   border: none;
   padding: 0;
   font: inherit;
@@ -181,8 +184,11 @@ button {
 }
 
 form {
-  padding: 20px;
-  display: none;
+  position: absolute;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 2);
+  z-index: 1;
+  margin-right: 20px;
+  padding-right: 5px;
 }
 
 button i {
@@ -206,16 +212,42 @@ button i {
 
 .bottom {
   padding: 0 20px;
-  color: black;
+  color: #404040;
+}
+
+.forcast {
+  background: rgba(0, 0, 0, 0.5);
+  width: 95%;
+  margin-top: 50px;
+  padding-top: 10px;
+  -webkit-box-shadow: 5px 5px 25px 5px #000000;
+  box-shadow: 5px 5px 25px 5px #000000;
+}
+
+.day-row {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  justify-items: center;
+}
+
+.day-row .col {
+  padding: 0;
+  margin: 0;
+}
+
+.day-row .col p,
+.day-row .col i {
+  font-size: 0.75rem;
+  color: white;
 }
 
 /* ==========================================================================
-   Helper classes
-   ========================================================================== */
+       Helper classes
+       ========================================================================== */
 
 /*
- * Hide visually and from screen readers
- */
+     * Hide visually and from screen readers
+     */
 
 .hidden,
 [hidden] {
@@ -223,13 +255,13 @@ button i {
 }
 
 /*
- * Hide only visually, but have it available for screen readers:
- * https://snook.ca/archives/html_and_css/hiding-content-for-accessibility
- *
- * 1. For long content, line feeds are not interpreted as spaces and small width
- *    causes content to wrap 1 word per line:
- *    https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe
- */
+     * Hide only visually, but have it available for screen readers:
+     * https://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+     *
+     * 1. For long content, line feeds are not interpreted as spaces and small width
+     *    causes content to wrap 1 word per line:
+     *    https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe
+     */
 
 .sr-only {
   border: 0;
@@ -245,10 +277,10 @@ button i {
 }
 
 /*
- * Extends the .sr-only class to allow the element
- * to be focusable when navigated to via the keyboard:
- * https://www.drupal.org/node/897638
- */
+     * Extends the .sr-only class to allow the element
+     * to be focusable when navigated to via the keyboard:
+     * https://www.drupal.org/node/897638
+     */
 
 .sr-only.focusable:active,
 .sr-only.focusable:focus {
@@ -262,24 +294,24 @@ button i {
 }
 
 /*
- * Hide visually and from screen readers, but maintain layout
- */
+     * Hide visually and from screen readers, but maintain layout
+     */
 
 .invisible {
   visibility: hidden;
 }
 
 /*
- * Clearfix: contain floats
- *
- * For modern browsers
- * 1. The space content is one way to avoid an Opera bug when the
- *    `contenteditable` attribute is included anywhere else in the document.
- *    Otherwise it causes space to appear at the top and bottom of elements
- *    that receive the `clearfix` class.
- * 2. The use of `table` rather than `block` is only necessary if using
- *    `:before` to contain the top-margins of child elements.
- */
+     * Clearfix: contain floats
+     *
+     * For modern browsers
+     * 1. The space content is one way to avoid an Opera bug when the
+     *    `contenteditable` attribute is included anywhere else in the document.
+     *    Otherwise it causes space to appear at the top and bottom of elements
+     *    that receive the `clearfix` class.
+     * 2. The use of `table` rather than `block` is only necessary if using
+     *    `:before` to contain the top-margins of child elements.
+     */
 
 .clearfix::before,
 .clearfix::after {
@@ -292,10 +324,10 @@ button i {
 }
 
 /* ==========================================================================
-   EXAMPLE Media Queries for Responsive Design.
-   These examples override the primary ('mobile first') styles.
-   Modify as content requires.
-   ========================================================================== */
+       EXAMPLE Media Queries for Responsive Design.
+       These examples override the primary ('mobile first') styles.
+       Modify as content requires.
+       ========================================================================== */
 
 @media only screen and (min-width: 35em) {
   /* Style adjustments for viewports that meet the condition */
@@ -309,10 +341,10 @@ button i {
 }
 
 /* ==========================================================================
-   Print styles.
-   Inlined to avoid the additional HTTP request:
-   https://www.phpied.com/delay-loading-your-print-css/
-   ========================================================================== */
+       Print styles.
+       Inlined to avoid the additional HTTP request:
+       https://www.phpied.com/delay-loading-your-print-css/
+       ========================================================================== */
 
 @media print {
   *,
@@ -339,9 +371,9 @@ button i {
   }
 
   /*
-   * Don't show links that are fragment identifiers,
-   * or use the `javascript:` pseudo protocol
-   */
+       * Don't show links that are fragment identifiers,
+       * or use the `javascript:` pseudo protocol
+       */
   a[href^="#"]::after,
   a[href^="javascript:"]::after {
     content: "";
@@ -358,9 +390,9 @@ button i {
   }
 
   /*
-   * Printing Tables:
-   * https://web.archive.org/web/20180815150934/http://css-discuss.incutio.com/wiki/Printing_Tables
-   */
+       * Printing Tables:
+       * https://web.archive.org/web/20180815150934/http://css-discuss.incutio.com/wiki/Printing_Tables
+       */
   thead {
     display: table-header-group;
   }
