@@ -5,7 +5,7 @@ const searchBtn = document.querySelector(".fa-search");
 // gio location api to get lon and lat for weather api
 const searchedLocation = async (city) => {
   const getLocation = await fetch(
-    `http://api.openweathermap.org/geo/1.0/direct?q=${city}&limit=1&appid=${apiKey}`
+    `https://api.openweathermap.org/geo/1.0/direct?q=${city}&limit=1&appid=${apiKey}`
   );
 
   const locatonData = await getLocation.json();
