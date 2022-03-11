@@ -117,7 +117,7 @@ body {
   justify-content: center;
   align-items: center;
 }
-.card {
+.card-box {
   width: 300px;
   height: 600px;
   border: 1px solid black;
@@ -126,12 +126,24 @@ body {
 }
 
 .card-img {
-  background-image: url(../img/sunny.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   width: inherit;
   height: inherit;
+}
+
+.loading {
+  visibility: hidden;
+}
+.loading::after {
+  visibility: visible;
+  content: "LOADING...";
+  color: green;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  font-size: 1.75rem;
 }
 
 .top {
@@ -144,7 +156,6 @@ button {
   border: none;
   padding: 0;
   font: inherit;
-  cursor: pointer;
   outline: inherit;
 }
 .fa-bars,
@@ -195,8 +206,16 @@ button i {
   margin-left: 8px;
 }
 .middle {
-  margin-bottom: 50px;
+  margin-bottom: 40px;
 }
+
+.todays-icon img {
+  padding: 0;
+  margin: 0;
+  width: 45px;
+  height: 45px;
+}
+
 .location {
   margin-bottom: 25px;
   text-transform: uppercase;
@@ -213,6 +232,16 @@ button i {
 .bottom {
   padding: 0 20px;
   color: #404040;
+}
+
+.bottom .high-temp,
+.bottom .low-temp {
+  margin-top: 10px;
+}
+
+.todays-condition {
+  margin-top: 10px;
+  text-transform: uppercase;
 }
 
 .forcast {
@@ -233,14 +262,19 @@ button i {
 .day-row .col {
   padding: 0;
   margin: 0;
-}
-
-.day-row .col p,
-.day-row .col i {
-  font-size: 0.75rem;
   color: white;
 }
 
+.day-row .col .day {
+  margin: 0;
+}
+
+.col img {
+  padding: 0;
+  margin: 0;
+  width: 30px;
+  height: 30px;
+}
 /* ==========================================================================
        Helper classes
        ========================================================================== */

@@ -35,118 +35,85 @@
   <body>
     <!-- Add your site or application content here -->
     <div id="app">
-      <div class="card">
+      <div class="card-box">
         <div class="card-img">
-          <section class="top d-flex justify-content-between">
-            <section class="dropdown">
-              <button class="hamburger dropbtn">
-                <i class="fa fa-bars"></i>
+          <div class="layout loading">
+            <section class="top d-flex justify-content-between">
+              <section class="dropdown">
+                <button class="hamburger dropbtn">
+                  <i class="fa fa-bars"></i>
+                </button>
+
+                <ul class="weather-list dropdown-content">
+                  <li data-city="Houston, Texas">
+                    <p>Houston, Texas</p>
+                  </li>
+                  <li data-city="Dallas, Texas">
+                    <p>Dallas, Texas</p>
+                  </li>
+                  <li data-city="Paris, France">
+                    <p>Paris, France</p>
+                  </li>
+                  <li data-city="London, England">
+                    <p>London, Eng</p>
+                  </li>
+                </ul>
+              </section>
+
+              <button class="add-location" onclick="showSearch()">
+                <i class="fa fa-plus"></i>
               </button>
-
-              <ul class="weather-list dropdown-content">
-                <li data-city="Houston">
-                  <p>Houston</p>
-                </li>
-                <li data-city="Dallas">
-                  <p>Dallas</p>
-                </li>
-                <li data-city="Paris">
-                  <p>Paris</p>
-                </li>
-                <li data-city="London">
-                  <p>London</p>
-                </li>
-              </ul>
             </section>
-
-            <button class="add-location" onclick="showSearch()">
-              <i class="fa fa-plus"></i>
-            </button>
-          </section>
-          <section class="hidden-add d-flex justify-content-end">
-            <form class="add d-flex hide">
-              <input
-                type="text"
-                placeholder="City,State/Country"
-                name="search"
-              />
-              <button type="submit"><i class="fa fa-search"></i></button>
-            </form>
-          </section>
-          <section class="middle d-flex flex-column align-items-center">
-            <h2 class="location">Location</h2>
-            <h1 class="current-temp"><span>°</span>55</h1>
-            <h5 class="current-day">Friday</h5>
-            <h5 class="current-date">25 February 22</h5>
-          </section>
-          <section class="bottom d-flex flex-row justify-content-between">
-            <div class="high-temp d-flex">
-              <div>
-                <i class="fa fa-temperature-high"></i>
+            <section class="hidden-add d-flex justify-content-end">
+              <form class="add d-flex hide">
+                <input
+                  type="text"
+                  placeholder="City,State/Country"
+                  name="search"
+                />
+                <button type="data">
+                  <i class="fa fa-search" onclick="getCity(event)"></i>
+                </button>
+              </form>
+            </section>
+            <section class="middle d-flex flex-column align-items-center">
+              <h2 class="location"></h2>
+              <h1 class="current-temp"></h1>
+              <h5 class="current-day"></h5>
+              <h5 class="current-date"></h5>
+            </section>
+            <section class="bottom d-flex flex-row justify-content-between">
+              <div class="high-temp d-flex">
+                <div>
+                  <i class="fa fa-temperature-high"></i>
+                </div>
+                <h5 class="todays-high"></h5>
               </div>
-              <h5 class="todays-high">65</h5>
-            </div>
-            <div class="todays-weather d-flex">
-              <div>
-                <i class="fa fa-sun"></i>
+              <div class="todays-weather d-flex">
+                <div class="todays-icon"></div>
+                <h5 class="todays-condition"></h5>
               </div>
-              <h5 class="todays-condition">Sunny</h5>
-            </div>
-            <div class="low-temp d-flex">
-              <div>
-                <i class="fa fa-temperature-low"></i>
+              <div class="low-temp d-flex">
+                <div>
+                  <i class="fa fa-temperature-low"></i>
+                </div>
+                <h5 class="todays-low"></h5>
               </div>
-              <h5 class="todays-low">35</h5>
-            </div>
-          </section>
-          <section class="wrapper d-flex justify-content-center">
-            <div class="forcast">
-              <div class="day-row">
-                <div class="col">
-                  <p class="day">Sun</p>
-                  <i class="icon fa fa-cloud-sun"></i>
-                  <p class="high-temp">°65</p>
-                  <p class="low-temp">°35</p>
-                </div>
-                <div class="col">
-                  <p class="day">Sun</p>
-                  <i class="icon fa fa-cloud-sun"></i>
-                  <p class="high-temp">°65</p>
-                  <p class="low-temp">°35</p>
-                </div>
-                <div class="col">
-                  <p class="day">Sun</p>
-                  <i class="icon fa fa-cloud-sun"></i>
-                  <p class="high-temp">°65</p>
-                  <p class="low-temp">°35</p>
-                </div>
-                <div class="col">
-                  <p class="day">Sun</p>
-                  <i class="icon fa fa-cloud-sun"></i>
-                  <p class="high-temp">°65</p>
-                  <p class="low-temp">°35</p>
-                </div>
-                <div class="col">
-                  <p class="day">Sun</p>
-                  <i class="icon fa fa-cloud-sun"></i>
-                  <p class="high-temp">°65</p>
-                  <p class="low-temp">°35</p>
-                </div>
-                <div class="col">
-                  <p class="day">Sun</p>
-                  <i class="icon fa fa-cloud-sun"></i>
-                  <p class="high-temp">°65</p>
-                  <p class="low-temp">°35</p>
-                </div>
-                <div class="col">
-                  <p class="day">Sun</p>
-                  <i class="icon fa fa-cloud-sun"></i>
-                  <p class="high-temp">°65</p>
-                  <p class="low-temp">°35</p>
+            </section>
+            <section class="wrapper d-flex justify-content-center">
+              <div class="forcast">
+                <div class="day-row">
+                  <div class="col"></div>
+                  <div class="col"></div>
+                  <div class="col"></div>
+                  <div class="col"></div>
+                  <div class="col"></div>
+                  <div class="col"></div>
+                  <div class="col"></div>
                 </div>
               </div>
-            </div>
-          </section>
+            </section>
+          </div>
         </div>
       </div>
     </div>
