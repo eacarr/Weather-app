@@ -87,7 +87,7 @@ const todaysDate = () => {
 const backgroundImage = (icon) => {
   const cardImg = document.querySelector(".card-img");
   if (icon === "01d" || icon === "01n") {
-    cardImg.style.backgroundImage = "url(./img/clear-sky.jpg)";
+    cardImg.style.backgroundImage = "url(./img/clear-sky.jpeg)";
     document.querySelector(".bottom").style.color = "white";
   } else if (icon === "02d" || icon === "02n") {
     cardImg.style.backgroundImage = "url(./img/few-clouds.jpg)";
