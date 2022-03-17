@@ -44,7 +44,7 @@ const showSearch = () => {
   } else {
     add.classList.add("hide");
   }
-  cityInput.innerText = "";
+  cityInput.value = "";
 };
 
 const city = document.querySelectorAll("li p");
